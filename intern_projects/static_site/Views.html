@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f3f3f3;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .container {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    /* Laptop View (min-width: 1024px) */
+    @media (min-width: 1024px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      header { font-size: 28px; }
+      .box { font-size: 18px; }
+    }
+
+    /* Tablet/iPad View (768px–1023px) */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      header { font-size: 24px; }
+      .box { font-size: 16px; }
+    }
+
+    /* Mobile View (max-width: 767px) */
+    @media (max-width: 767px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      header { font-size: 20px; padding: 15px; }
+      .box { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Our Driving License Countries</header>
+
+  <div class="container">
+    <div class="box">North America</div>
+    <div class="box">Europe</div>
+    <div class="box">Middle East</div>
+    <div class="box">Asia</div>
+    <div class="box">Africa</div>
+    <div class="box">Latin America</div>
+  </div>
+
+</body>
+</html>

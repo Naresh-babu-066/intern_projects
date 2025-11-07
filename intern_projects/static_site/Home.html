@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage Layout</title>
+  <link rel="stylesheet" href="Home.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">Intern-Web</div>
+    <nav class="nav">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About Us</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="controls">
+    <button onclick="setView('laptop')">💻 Laptop</button>
+    <button onclick="setView('tablet')">🔲 Tablet/iPad</button>
+    <button onclick="setView('mobile')">📱 Mobile</button>
+  </div>
+
+  <iframe id="preview" src="Views.html"></iframe>
+
+  <script>
+    const frame = document.getElementById('preview');
+    function setView(view) {
+      frame.className = view;
+    }
+  </script>
+
+  <!-- SEARCH BAR -->
+  <section class="search-section">
+    <input type="text" placeholder="Search..." class="search-bar" />
+  </section>
+
+  <!-- DROPDOWN MENUS -->
+  <section class="menu-section">
+    <div class="dropdown">
+      <button class="dropbtn">User Category ▼</button>
+      <div class="dropdown-content">
+        <a href="#">Free Trial</a>
+        <a href="#">Premium</a>
+      </div>
+    <div class="dropdown">
+      <button class="dropbtn">Age ▼</button>
+      <div class="dropdown-content">
+        <a href="#">16-18</a>
+        <a href="#">18-20</a>
+        <a href="#">20+</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Vechicle ▼</button>
+      <div class="dropdown-content">
+        <a href="#">Bike</a>
+        <a href="#">Car</a>
+        <a href="#">Truck</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Country ▼</button>
+      <div class="dropdown-content">
+        <a href="#">North America</a>
+        <a href="#">Europe</a>
+        <a href="#">Middle East</a>
+        <a href="#">Asia</a>
+        <a href="#">Commonwealth/Pacific</a>
+        <a href="#">Africa</a>
+        <a href="#">Latin America</a>
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="cards-section">
+    <div class="card">Sharpen your knowledge with our structured Multiple Choice Question tests. Each test is designed to help learners understand core topics through real exam-style questions.
+Gain instant feedback, track your progress, and identify areas to improve before taking your actual exam.<br /><button>MCQ's Test</button></div>
+    <div class="card">Revise smarter with our interactive flashcards. Each flashcard helps you quickly recall key facts, definitions, and concepts — perfect for rapid memory training.
+Swipe, flip, and learn — a quick and effective way to strengthen long-term memory.<br /><button>Flashcards Test</button></div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="content-section">
+    <aside class="sidebar">
+      <button>Log In</button>
+      <button>Profile</button>
+      <button>Settings</button>
+      <button>latest work</button>
+      <button>services</button>
+      <button>resources</button>
+      <button>compancy</button>
+    </aside>
+    <div class="content">
+      <h2>Overview</h2>
+        <p>HSNTEK offers a DMV Permit Test preparation platform.</p>
+        <p>This is aimed at helping aspirants prepare for the U.S. DMV (Department of Motor Vehicles) driving theory / permit test.</p>
+
+      <h2>Key Features</h2>
+        <p>Mock Tests: The platform provides mock tests that simulate the DMV theory test.</p>
+        <p>Coverage of Topics: These practice tests cover all driving law topics — road rules, traffic signs, regulations, safety, etc.</p>
+        <p>Accessible Online: The tests are available online, making it more accessible for learners to practice at their own pace and convenience.</p>
+
+      <h2>Target Audience</h2>
+        <p>People preparing for their learner permit / driver’s license test in the United States.</p>
+        <p>Both new drivers (teens) and adults who need to clear the theory portion of the DMV test.</p>
+        <p>Aliquam ac justo at velit aliquet ullamcorper.</p>
+
+      <div class="content-boxes">
+  <div class="box large">
+    <video controls autoplay width="100" height="100">
+      <source src="videoplayback.mp4" type="video/mp4"/> 
+    </video>
+  </div>
+  <div class="box small">
+  <img src="https://uploads.tapatalk-cdn.com/20200903/779bbcbc3b8cb8b2cee13de10ca09334.jpg" alt="Sample Image">
+</div>
+  <div class="box small">
+  <img src="https://cdn.wallpapersafari.com/23/98/pD9uI5.jpg" alt="Sample Image">
+</div>
+  <div class="box small">
+  <img src="https://wallpaperaccess.com/full/1291276.jpg" alt="Sample Image">
+</div>
+  <div class="box small">
+  <img src="https://media.drivingelectric.com/image/private/s--t6i5Fy_0--/v1602852243/drivingelectric/2020-08/ford-transit-custom-phev-front-tracking-2.jpg" alt="Sample Image">
+</div>
+</div>  
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">Intern-Web</div>
+      <div class="quick-links">
+        <h4>Quick Links</h4>
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="contact">
+        <h4>Contact Us</h4>
+        <p>Email: info.intern@sample.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Intern Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+ <!-- LOGIN PAGE (Popup with Toggle Slider) -->
+<div class="login-page" id="loginPage">
+  <div class="wrapper">
+    <div class="form-box login">
+      <h2>Login</h2>
+      <div id="alertBox" class="alert-box"></div>
+
+      <form id="loginForm">
+        <div class="input-box">
+          <input type="email" id="loginMail" required />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" id="loginPassword" required />
+          <label>Password</label>
+        </div>
+        <button type="button" id="loginBtn" class="btn">Login</button>
+      </form>
+      <div class="toggle-text">
+        <p>Don’t have an account? <a href="#" id="registerLink">Sign Up</a></p>
+      </div>
+    </div>
+
+    <div class="form-box register">
+      <h2>Sign Up</h2>
+      <div id="alertBox2" class="alert-box"></div>
+
+      <form id="signupForm">
+        <div class="input-box">
+          <input type="text" id="signupName" required />
+          <label>Name</label>
+        </div>
+        <div class="input-box">
+          <input type="email" id="signupMail" required />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" id="signupPassword" required />
+          <label>Password</label>
+        </div>
+        <button type="button" id="signupBtn" class="btn">Sign Up</button>
+      </form>
+      <div class="toggle-text">
+        <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="Home.js"></script>
+</body>
+</html>
